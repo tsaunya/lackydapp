@@ -374,7 +374,7 @@ body {
 }
 
 .whatis-header__gradient {
-  background: linear-gradient(136deg, #7C5BFF 7.28%, #43F076 40.46%, #36FF62 100%, #3DA9FF 100%);
+  background: linear-gradient(180deg, #641BFF 0%, #559EBA 56.25%, #93FF61 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
@@ -1895,7 +1895,15 @@ body {
     align-items: center;
     background-image: linear-gradient(136deg, #675EFF 7.28%, #6DAEFF 40.46%, #FFBB54 100%, #FFC46B 100%);
     margin: 0 auto;
+    position: -webkit-sticky; /* Safari */
+    position: sticky;
+    top: 0;
+    z-index: 6;
   }
+
+  /*.navbar-jackpot__item-mobile img{*/
+  /*  background: none;*/
+  /*}*/
 
   .navbar-jackpot__item-play {
     width: 67px;
@@ -1961,10 +1969,15 @@ body {
 
   .whatis-header {
     font-size: 22px;
+    padding-bottom: 180px;
+    background-image: url("img/middle-left-bg.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    animation: gradient4 4s ease infinite;
   }
 
   .whatis-main__wrap {
-    margin-top: 180px;
+    margin-top: 0;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -1975,7 +1988,7 @@ body {
     width: 156px;
     left: 0;
     right: 0;
-    top: -90%;
+    top: -95%;
     margin-left: auto;
     margin-right: auto;
   }
@@ -2004,6 +2017,7 @@ body {
 
   .platform {
     padding: 0 20px;
+    background-position: top;
   }
 
   .platform-header {
@@ -2028,7 +2042,9 @@ body {
   }
 
   .howto-bg {
-    display: none;
+    width: 94%;
+    bottom: -5%;
+    animation: opacity 4s ease infinite;
   }
 
   .howto-header {
@@ -2050,11 +2066,8 @@ body {
   }
 
   .timeline__point {
-    left: 0;
-    right: 0;
+    left: 50%;
     top: -10%;
-    margin-left: auto;
-    margin-right: auto;
     width: 31px;
     height: 31px;
     border-radius: 31px;
@@ -2070,6 +2083,8 @@ body {
     background-clip: padding-box;
     background-size: 120% 100%;
     background-position: center;
+    z-index: 5;
+    position: relative;
   }
 
   .round-wrap {
@@ -2242,6 +2257,11 @@ body {
 
   .timeline-mobile {
     display: block;
+  }
+
+  .bg-circle__right {
+    display: block;
+    right: -18%;
   }
 }
 
