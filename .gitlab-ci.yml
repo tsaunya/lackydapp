@@ -4,6 +4,9 @@ before_script:
   - ":"
 
 pages:
+  script:
+    - ":"
+
   artifacts:
     paths:
       - public
@@ -11,5 +14,3 @@ pages:
   only:
     - main
     - develop
-
-
