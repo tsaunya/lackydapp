@@ -36,10 +36,10 @@
         class="navbar-menu__logo"
       />
       <div class="navbar-menu__links">
-        <span class="navbar-menu__links-item">About us</span>
-        <span class="navbar-menu__links-item">How To Play</span>
-        <span class="navbar-menu__links-item">Play now</span>
-        <span class="navbar-menu__links-item">Contact</span>
+        <span class="navbar-menu__links-item"><a href="#about">What is</a></span>
+        <span class="navbar-menu__links-item"><a href="#howto">How To Play</a></span>
+        <span class="navbar-menu__links-item"><a href="#play">Play now</a></span>
+        <span class="navbar-menu__links-item"><a href="#support">Support</a></span>
       </div>
     </div>
     <div class="navbar-jackpot">
@@ -47,7 +47,10 @@
         <span class="navbar-jackpot__item-jackpot">JACKPOT:</span>
         <img src="img/jackpot-icon.png"/>
         <span class="navbar-jackpot__item-price">9.05 ETH</span>
-        <button class="navbar-jackpot__item-play">
+        <button
+          class="navbar-jackpot__item-play"
+          onclick="javascript:window.open('https://t.me/luckydapp', '_blank')"
+        >
           <img src="img/play-icon.svg"/>
           Play
         </button>
@@ -56,23 +59,46 @@
         En
       </button>
       <div class="icon nav-icon-5">
-        <span></span>
-        <span></span>
-        <span></span>
+        <img src="img/burger.svg"/>
       </div>
+      <div class="nav-mobile">
+        <div class="nav-mobile__header">
+          <img
+            src="img/logo-black.png"
+            class="nav-mobile__header__logo"
+          />
+          <div>
+            <button class="nav-mobile__header__lang">
+              En
+            </button>
+            <img
+              src="img/close.svg"
+              class="nav-mobile__header-close icon"
+            />
+          </div>
+        </div>
       <ul class="menu">
-        <li class="navbar-menu__links-item menu-item">About us</li>
-        <li class="navbar-menu__links-item menu-item">How To Play</li>
-        <li class="navbar-menu__links-item menu-item">Play now</li>
-        <li class="navbar-menu__links-item menu-item">Contact</li>
+        <li class="navbar-menu__links-item menu-item"><a href="#about">What is</a></li>
+        <li class="navbar-menu__links-item menu-item"><a href="#howto">How To Play</a></li>
+        <li class="navbar-menu__links-item menu-item"><a href="#play">Play now</a></li>
+        <li class="navbar-menu__links-item menu-item"><a href="#support">Support</a></li>
+        <li class="navbar-menu__links-item menu-item">
+          Social
+          <img src="img/telegram-black.svg" onclick="javascript:window.open('https://t.me/luckydapp', '_blank')"/>
+          <img src="img/inst-black.svg" onclick="javascript:window.open('https://instagram.com/lucky.dapp?igshid=MTIzZWMxMTBkOA==', '_blank')">
+        </li>
       </ul>
+      </div>
     </div>
   </div>
   <div class="navbar-jackpot__item-mobile">
     <span class="navbar-jackpot__item-jackpot">JACKPOT:</span>
     <img src="img/jackpot-icon.png"/>
     <span class="navbar-jackpot__item-price">9.05 ETH</span>
-    <button class="navbar-jackpot__item-play">
+    <button
+      class="navbar-jackpot__item-play"
+      onclick="javascript:window.open('https://t.me/luckydapp', '_blank')"
+    >
       <img src="img/play-icon.svg"/>
       Play
     </button>
@@ -118,7 +144,10 @@
           <span class="header-jackpot__play-header">Now playing</span>
           <div class="header-jackpot__play-btn">
             <span>1 ticket ≈ 20 $</span>
-            <button class="btn">Play</button>
+            <button
+              onclick="javascript:window.open('https://t.me/luckydapp', '_blank')"
+              class="btn"
+            >Play</button>
           </div>
         </div>
       </div>
@@ -137,7 +166,10 @@
         </div>
       </div>
     </div>
-    <div class="whatis">
+    <div
+      class="whatis"
+      id="about"
+    >
       <div class="whatis-header">What is <span class="whatis-header__gradient">LuckyDapp?</span></div>
       <div class="whatis-main__wrap">
         <div class="whatis-main__wrap-info">
@@ -194,7 +226,7 @@
         />
       </div>
     </div>
-    <div class="howto">
+    <div class="howto" id="howto">
       <img
         class="howto-bg"
         src="img/ellipse.png"
@@ -208,7 +240,7 @@
         <div class="timeline__component">
         </div>
         <div class="timeline__component">
-          <div class="timeline__paragraph">Get a wallet: If you don't already have one, sign up for an <a href="https://ethereum.org/en/wallets/find-wallet/">Ethereum</a>-compatible wallet (such as Metamask or Trustwallet).</div>
+          <div class="timeline__paragraph">Get a wallet: If you don't already have one, sign up for an <a href="https://ethereum.org/en/wallets/find-wallet/" target="_blank">Ethereum</a>-compatible wallet (such as Metamask or Trustwallet).</div>
         </div>
         <div class="timeline__middle">
           <div class="timeline__point"></div>
@@ -299,7 +331,7 @@
         </div>
       </div>
     </div>
-    <div class="players">
+    <div class="players" id="play">
       <div class="round-wrap">
         <div class="round-header">
           <div class="round-header__title">Active round</div>
@@ -334,7 +366,10 @@
             <div class="round-info__item-title">Winner</div>
             <div class="round-info__item-winner_info">
               <span>No Winner Yet</span>
-              <button class="btn">Play</button>
+              <button
+                onclick="javascript:window.open('https://t.me/luckydapp', '_blank')"
+                class="btn"
+              >Play</button>
             </div>
           </div>
         </div>
@@ -527,10 +562,13 @@
         />
       </div>
     </div>
-    <div class="contact">
+    <div class="contact" id="support">
       <div class="contact-header">Support</div>
-      <div class="contact-info">Check our <a>How To Play</a> guide or contact our Support team:</div>
-      <button class="contact-btn btn">Get in touch</button>
+      <div class="contact-info">Check our <a href="https://t.me/luckydapp" target="_blank">How To Play</a> guide or contact our Support team:</div>
+      <button
+        onclick="javascript:window.open('https://t.me/luckydapp', '_blank')"
+        class="contact-btn btn"
+      >Get in touch</button>
     </div>
   </div>
   <div class="footer">
@@ -538,8 +576,8 @@
     <div class="footer-content">
       <div class="footer-content__social">
         <span>Social</span>
-        <img src="img/telegram.svg"/>
-        <img src="img/inst.svg">
+        <img src="img/telegram.svg" onclick="javascript:window.open('https://t.me/luckydapp', '_blank')"/>
+        <img src="img/inst.svg" onclick="javascript:window.open('https://instagram.com/lucky.dapp?igshid=MTIzZWMxMTBkOA==', '_blank')">
       </div>
       <div class="footer-content__logo">
         <img src="img/logo.png"/>
@@ -602,17 +640,17 @@
         //seconds
       // }, 0)
   }());
-  const the_animation = document.querySelectorAll('.timeline__middle')
+  const the_animation = document.querySelectorAll('.timeline__point')
 
   const observer = new IntersectionObserver((entries) => {
       entries.forEach((entry) => {
         if (entry.isIntersecting) {
-          entry.target.classList.add('timeline__point-animation')
+          entry.target.classList.add('timeline__point-animation');
+          // observer.unobserve(entry.target);
         }
         else {
-          entry.target.classList.remove('timeline__point-animation')
+          entry.target.classList.remove('timeline__point-animation');
         }
-
       })
     },
     { threshold: 0.5
@@ -627,7 +665,7 @@
   icons.forEach (icon => {
     icon.addEventListener('click', (event) => {
       icon.classList.toggle("open");
-      const menu = document.querySelector('.menu');
+      const menu = document.querySelector('.nav-mobile');
       menu.classList.toggle('open-menu');
     });
   });
