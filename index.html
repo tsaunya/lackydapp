@@ -1,0 +1,587 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Luckydapp</title>
+  <link rel="stylesheet" href="reset.css" type="text/css">
+  <link rel="stylesheet" href="styles.css" type="text/css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/bodymovin/5.12.2/lottie.min.js"></script>
+</head>
+<body>
+<div class="wrap">
+  <img
+    class="bg-circle__top"
+    src="img/half-ellipse.png"
+  />
+  <img
+    class="bg-circle__left"
+    src="img/half-ellipse.png"
+  />
+  <img
+    class="bg-circle__right"
+    src="img/half-ellipse.png"
+  />
+  <img
+    class="bg-circle__left-middle"
+    src="img/half-ellipse.png"
+  />
+  <div class="navbar">
+    <div class="navbar-menu">
+      <img
+        src="img/logo.png"
+        class="navbar-menu__logo"
+      />
+      <div class="navbar-menu__links">
+        <span class="navbar-menu__links-item">About us</span>
+        <span class="navbar-menu__links-item">How To Play</span>
+        <span class="navbar-menu__links-item">Play now</span>
+        <span class="navbar-menu__links-item">Contact</span>
+      </div>
+    </div>
+    <div class="navbar-jackpot">
+      <div class="navbar-jackpot__item">
+        <span class="navbar-jackpot__item-jackpot">JACKPOT:</span>
+        <img src="img/jackpot-icon.png"/>
+        <span class="navbar-jackpot__item-price">9.05 ETH</span>
+        <button class="navbar-jackpot__item-play">
+          <img src="img/play-icon.svg"/>
+          Play
+        </button>
+      </div>
+      <button class="navbar-jackpot__lang">
+        En
+      </button>
+      <div class="icon nav-icon-5">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+      <ul class="menu">
+        <li class="navbar-menu__links-item menu-item">About us</li>
+        <li class="navbar-menu__links-item menu-item">How To Play</li>
+        <li class="navbar-menu__links-item menu-item">Play now</li>
+        <li class="navbar-menu__links-item menu-item">Contact</li>
+      </ul>
+    </div>
+  </div>
+  <div class="body">
+    <div class="header">
+      <div class="header-title__wrap">
+        <div class="header-text">Take the 0,01 Ethereum Jackpot Leap: Act and Win Big!</div>
+<!--        <div class="header-title__img">-->
+          <img
+            class="header-title__img"
+            src="img/bitcoin-1.png"
+          />
+<!--        </div>-->
+      </div>
+      <div class="header-jackpot__wrap">
+        <div class="header-jackpot__eth">
+          <div
+            class="header-jackpot__animation"
+            id="header-jackpot__animation"
+          ></div>
+<!--          <img-->
+<!--            class="header-jackpot__eth-img"-->
+<!--            src="img/temporary-eth.png"-->
+<!--          />-->
+          <div class="header-jackpot__eth-info">
+            <div>Jackpot!</div>
+            <div>9.05 ETH</div>
+          </div>
+        </div>
+        <div class="header-jackpot__timer">
+          <span class="header-jackpot__timer-info">Until the end of the draw</span>
+          <div id="countdown">
+            <ul>
+              <li><span id="days"></span></li>
+              <li><span id="hours"></span></li>
+              <li><span id="minutes"></span></li>
+              <li><span id="seconds"></span></li>
+            </ul>
+          </div>
+        </div>
+        <div class="header-jackpot__play">
+          <span class="header-jackpot__play-header">Now playing</span>
+          <div class="header-jackpot__play-btn">
+            <span>1 ticket ≈ 20 $</span>
+            <button class="btn">Play</button>
+          </div>
+        </div>
+      </div>
+      <div class="header-advantages__wrap">
+        <div class="header-advantages__item">
+          <div class="header-advantages__item-circle"></div>
+          <span class="header-advantages__item-text">CREATING A NEW FUTURE FOR CRYPTO-LOTTERY</span>
+        </div>
+        <div class="header-advantages__item">
+          <div class="header-advantages__item-circle"></div>
+          <span class="header-advantages__item-text">NO FEES</span>
+        </div>
+        <div class="header-advantages__item">
+          <div class="header-advantages__item-circle"></div>
+          <span class="header-advantages__item-text">100% TRULY DECENTRALIZED</span>
+        </div>
+      </div>
+    </div>
+    <div class="whatis">
+      <div class="whatis-header">What is <span class="whatis-header__gradient">LuckyDapp?</span></div>
+      <div class="whatis-main__wrap">
+        <div class="whatis-main__wrap-info">
+          The winner picking process is carried out through a cryptographically secure and provably fair random number generator (RNG). This ensures that each participant has an equal chance of winning the lottery.
+        </div>
+        <div
+          id="animation-container"
+          class="animation-container"
+        ></div>
+        <img
+          class="whatis-main__img"
+          src="img/ftx-token.png"
+        />
+      </div>
+      <div class="whatis-description__wrap">
+        <div class="whatis-description__wrap-item description__wrap-item_gradient">
+          <div class="whatis-description__item-header">Decentralized <br>and Secure</div>
+          <div class="whatis-description__item-info">LuckyDapp is powered by smart contracts, ensuring complete transparency and security for all participants.</div>
+        </div>
+        <div class="whatis-description__wrap-item">
+          <div class="whatis-description__item-header">Choose <br>Your Odds</div>
+          <div class="whatis-description__item-info">Customize your bets by selecting your desired amount of tickets, increasing your chances of hitting the jackpot.</div>
+        </div>
+        <div class="whatis-description__wrap-item">
+          <div class="whatis-description__item-header">Instant <br>Payouts</div>
+          <div class="whatis-description__item-info">No more waiting for weeks! Get your hands on your well-deserved winnings immediately after the draw.</div>
+        </div>
+        <div class="whatis-description__wrap-item">
+          <div class="whatis-description__item-header">Easy <br>Access</div>
+          <div class="whatis-description__item-info">No registration, no hassle! Get started by connecting your Ethereum wallet, and you're good to go.</div>
+        </div>
+      </div>
+    </div>
+    <div class="platform">
+      <div class="platform-header"><span class="platform-header__gradient">Unmatched Transparency:</span> LuckyDapp's Trustworthy Platform</div>
+      <div class="platform-description__wrap">
+        <img
+          class="platform-description__img-mobile"
+          src="img/macbook.png"
+        />
+        <div class="platform-description__wrap-mobile">
+        <div class="platform-description__item">
+          <div class="platform-description__item-title">LuckyDapp's Commitment to Transparency</div>
+          <div class="platform-description__item-info">One of LuckyDapp's core principles is providing our users with complete transparency, establishing trust and confidence in the entire lottery process. With the Ethereum blockchain at its core, our platform showcases every transaction and smart contract, guaranteeing fairness and honesty all around.</div>
+        </div>
+        <div class="platform-description__item">
+          <div class="platform-description__item-title">Etherscan: Verifiable and Accessible</div>
+          <div class="platform-description__item-info">All LuckyDapp users can verify the legitimacy of each lottery draw and the distribution of winnings through the universally recognized Etherscan platform. By simply searching for the associated smart contract address on Etherscan, you can access all the details and history of past transactions, ensuring an unparalleled level of openness.</div>
+        </div>
+        </div>
+        <img
+          class="platform-description__img"
+          src="img/macbook.png"
+        />
+      </div>
+    </div>
+    <div class="howto">
+      <img
+        class="howto-bg"
+        src="img/ellipse.png"
+      />
+      <div class="howto-header">How to Play the LuckyDapp: <span class="howto-header__gradient">Easy Steps</span></div>
+      <div class="timeline">
+        <div class="timeline__component">
+        </div>
+        <div class="timeline__middle">
+        </div>
+        <div class="timeline__component">
+        </div>
+        <div class="timeline__component">
+          <div class="timeline__paragraph">Get a wallet: If you don't already have one, sign up for an <a href="https://ethereum.org/en/wallets/find-wallet/">Ethereum</a>-compatible wallet (such as Metamask or Trustwallet).</div>
+        </div>
+        <div class="timeline__middle">
+          <div class="timeline__point"></div>
+        </div>
+        <div class="timeline__component">
+        </div>
+        <div class="timeline__component">
+        </div>
+        <div class="timeline__middle">
+          <div class="timeline__point"></div>
+        </div>
+        <div class="timeline__component">
+          <div class="timeline__paragraph">Fund your wallet: Load your wallet with sufficient ETH for your desired number of lottery tickets.</div>
+        </div>
+        <div class="timeline__component">
+          <div class="timeline__paragraph">Participate: Send exactly 0.01 ETH to the contract address Remember, 0.01 ETH is the price for 1 lottery ticket. For multiple entries, multiply 0.01 ETH by the number of tickets you want.</div>
+        </div>
+        <div class="timeline__middle">
+          <div class="timeline__point"></div>
+        </div>
+        <div class="timeline__component">
+        </div>
+        <div class="timeline__component">
+        </div>
+        <div class="timeline__middle">
+          <div class="timeline__point"></div>
+        </div>
+        <div class="timeline__component">
+          <div class="timeline__paragraph">Wait for confirmation: Once your transaction is confirmed on the Ethereum blockchain, you're entered into the lottery draw!</div>
+        </div>
+        <div class="timeline__component">
+          <div class="timeline__paragraph">Stay tuned: Keep your eyes on our website for the draw date and to see if you've won fabulous prize!</div>
+        </div>
+        <div class="timeline__middle">
+          <div class="timeline__point"></div>
+        </div>
+        <div class="timeline__component">
+        </div>
+        <div class="timeline__component">
+        </div>
+        <div class="timeline__middle">
+          <div class="timeline__point"></div>
+        </div>
+        <div class="timeline__component">
+          <div class="timeline__paragraph">Now that you know how easy and fun it is to play our Ethereum lottery, go ahead and give it a try! Good luck!</div>
+        </div>
+      </div>
+      <div class="qr-block">
+        <div class="qr-wrap">
+          <img src="img/qr.png"/>
+          <span>Scan me!</span>
+        </div>
+      </div>
+    </div>
+    <div class="players">
+      <div class="round-wrap">
+        <div class="round-header">
+          <div class="round-header__title">Active round</div>
+          <div class="round-timer">
+            <span class="round-timer__info">Until the end of the draw</span>
+            <div id="countdown-round">
+              <ul>
+                <li><span id="days-round"></span></li>
+                <li><span id="hours-round"></span></li>
+                <li><span id="minutes-round"></span></li>
+                <li><span id="seconds-round"></span></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="round-info">
+          <div class="round-info__item-round">
+            <div class="round-info__item-title">Round</div>
+            <div class="round-info__item-round_number">2150</div>
+          </div>
+          <div class="round-info__item-jackpot">
+            <div class="round-info__item-title">Jackpot!</div>
+            <div class="round-info__item-jackpot-info">
+              <div
+                class="round-info__animation"
+                id="round-info__animation"
+              ></div>
+              <span>9.05 ETH</span>
+            </div>
+          </div>
+          <div class="round-info__item-winner">
+            <div class="round-info__item-title">Winner</div>
+            <div class="round-info__item-winner_info">
+              <span>No Winner Yet</span>
+              <button class="btn">Play</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="players-wrap">
+        <ul class="players-table">
+          <li class="players-table__header">
+            <div class="players-table__header-item col-1 players-table__rank">Rank</div>
+            <div class="players-table__header-item col-2">Wallet address</div>
+            <div class="players-table__header-item col-3">Games played</div>
+            <div class="players-table__header-item col-4">Total win</div>
+          </li>
+        </ul>
+          <div class="players-table__body">
+            <ul>
+              <li class="players-table__body-row first-row">
+                <div class="players-table__body-item col-1 players-table__rank">1</div>
+                <div class="players-table__body-item col-2">0x1tAaz5x1HUXrCNLbtMDqcw6o12Nn4xqX6o12Nn4x</div>
+                <div class="players-table__body-item col-3">45</div>
+                <div class="players-table__body-item col-4">7.10 ETH</div>
+              </li>
+              <li class="players-table__body-row second-row">
+                <div class="players-table__body-item col-1 players-table__rank">2</div>
+                <div class="players-table__body-item col-2">0x1tAaz5x1HUXrCNLbtMDqcw6o12Nn4xqX6o12Nn4x</div>
+                <div class="players-table__body-item col-3">25</div>
+                <div class="players-table__body-item col-4">3.10 ETH</div>
+              </li>
+              <li class="players-table__body-row third-row">
+                <div class="players-table__body-item col-1 players-table__rank">3</div>
+                <div class="players-table__body-item col-2">0x1tAaz5x1HUXrCNLbtMDqcw6o12Nn4xqX6o12Nn4x</div>
+                <div class="players-table__body-item col-3">3</div>
+                <div class="players-table__body-item col-4">0.95 ETH</div>
+              </li>
+              <li class="players-table__body-row">
+                <div class="players-table__body-item col-1 players-table__rank">4</div>
+                <div class="players-table__body-item col-2">0x1tAaz5x1HUXrCNLbtMDqcw6o12Nn4xqX6o12Nn4x</div>
+                <div class="players-table__body-item col-3">23</div>
+                <div class="players-table__body-item col-4">4.23 ETH</div>
+              </li>
+              <li class="players-table__body-row">
+                <div class="players-table__body-item col-1 players-table__rank">5</div>
+                <div class="players-table__body-item col-2">0x1tAaz5x1HUXrCNLbtMDqcw6o12Nn4xqX6o12Nn4x</div>
+                <div class="players-table__body-item col-3">12</div>
+                <div class="players-table__body-item col-4">6.02 ETH</div>
+              </li>
+              <li class="players-table__body-row">
+                <div class="players-table__body-item col-1 players-table__rank">6</div>
+                <div class="players-table__body-item col-2">0x1tAaz5x1HUXrCNLbtMDqcw6o12Nn4xqX6o12Nn4x</div>
+                <div class="players-table__body-item col-3">15</div>
+                <div class="players-table__body-item col-4">2.17 ETH</div>
+              </li>
+              <li class="players-table__body-row">
+                <div class="players-table__body-item col-1 players-table__rank">7</div>
+                <div class="players-table__body-item col-2">0x1tAaz5x1HUXrCNLbtMDqcw6o12Nn4xqX6o12Nn4x</div>
+                <div class="players-table__body-item col-3">9</div>
+                <div class="players-table__body-item col-4">1.89 ETH</div>
+              </li>
+              <li class="players-table__body-row">
+                <div class="players-table__body-item col-1 players-table__rank">8</div>
+                <div class="players-table__body-item col-2">0x1tAaz5x1HUXrCNLbtMDqcw6o12Nn4xqX6o12Nn4x</div>
+                <div class="players-table__body-item col-3">39</div>
+                <div class="players-table__body-item col-4">5.21 ETH</div>
+              </li>
+              <li class="players-table__body-row">
+                <div class="players-table__body-item col-1 players-table__rank">9</div>
+                <div class="players-table__body-item col-2">0x1tAaz5x1HUXrCNLbtMDqcw6o12Nn4xqX6o12Nn4x</div>
+                <div class="players-table__body-item col-3">1</div>
+                <div class="players-table__body-item col-4">3.10 ETH</div>
+              </li>
+              <li class="players-table__body-row">
+                <div class="players-table__body-item col-1 players-table__rank">10</div>
+                <div class="players-table__body-item col-2">0x1tAaz5x1HUXrCNLbtMDqcw6o12Nn4xqX6o12Nn4x</div>
+                <div class="players-table__body-item col-3">13</div>
+                <div class="players-table__body-item col-4">3.10 ETH</div>
+              </li>
+              <li class="players-table__body-row">
+                <div class="players-table__body-item col-1 players-table__rank">11</div>
+                <div class="players-table__body-item col-2">0x1tAaz5x1HUXrCNLbtMDqcw6o12Nn4xqX6o12Nn4x</div>
+                <div class="players-table__body-item col-3">13</div>
+                <div class="players-table__body-item col-4">3.10 ETH</div>
+              </li>
+              <li class="players-table__body-row">
+                <div class="players-table__body-item col-1 players-table__rank">12</div>
+                <div class="players-table__body-item col-2">0x1tAaz5x1HUXrCNLbtMDqcw6o12Nn4xqX6o12Nn4x</div>
+                <div class="players-table__body-item col-3">13</div>
+                <div class="players-table__body-item col-4">3.10 ETH</div>
+              </li>
+              <li class="players-table__body-row">
+                <div class="players-table__body-item col-1 players-table__rank">13</div>
+                <div class="players-table__body-item col-2">0x1tAaz5x1HUXrCNLbtMDqcw6o12Nn4xqX6o12Nn4x</div>
+                <div class="players-table__body-item col-3">13</div>
+                <div class="players-table__body-item col-4">3.10 ETH</div>
+              </li>
+              <li class="players-table__body-row">
+                <div class="players-table__body-item col-1 players-table__rank">14</div>
+                <div class="players-table__body-item col-2">0x1tAaz5x1HUXrCNLbtMDqcw6o12Nn4xqX6o12Nn4x</div>
+                <div class="players-table__body-item col-3">13</div>
+                <div class="players-table__body-item col-4">3.10 ETH</div>
+              </li>
+              <li class="players-table__body-row">
+                <div class="players-table__body-item col-1 players-table__rank">15</div>
+                <div class="players-table__body-item col-2">0x1tAaz5x1HUXrCNLbtMDqcw6o12Nn4xqX6o12Nn4x</div>
+                <div class="players-table__body-item col-3">13</div>
+                <div class="players-table__body-item col-4">3.10 ETH</div>
+              </li>
+              <li class="players-table__body-row">
+                <div class="players-table__body-item col-1 players-table__rank">16</div>
+                <div class="players-table__body-item col-2">0x1tAaz5x1HUXrCNLbtMDqcw6o12Nn4xqX6o12Nn4x</div>
+                <div class="players-table__body-item col-3">13</div>
+                <div class="players-table__body-item col-4">3.10 ETH</div>
+              </li>
+              <li class="players-table__body-row">
+                <div class="players-table__body-item col-1 players-table__rank">17</div>
+                <div class="players-table__body-item col-2">0x1tAaz5x1HUXrCNLbtMDqcw6o12Nn4xqX6o12Nn4x</div>
+                <div class="players-table__body-item col-3">13</div>
+                <div class="players-table__body-item col-4">3.10 ETH</div>
+              </li>
+              <li class="players-table__body-row">
+                <div class="players-table__body-item col-1 players-table__rank">18</div>
+                <div class="players-table__body-item col-2">0x1tAaz5x1HUXrCNLbtMDqcw6o12Nn4xqX6o12Nn4x</div>
+                <div class="players-table__body-item col-3">13</div>
+                <div class="players-table__body-item col-4">3.10 ETH</div>
+              </li>
+              <li class="players-table__body-row">
+                <div class="players-table__body-item col-1 players-table__rank">19</div>
+                <div class="players-table__body-item col-2">0x1tAaz5x1HUXrCNLbtMDqcw6o12Nn4xqX6o12Nn4x</div>
+                <div class="players-table__body-item col-3">13</div>
+                <div class="players-table__body-item col-4">3.10 ETH</div>
+              </li>
+              <li class="players-table__body-row">
+                <div class="players-table__body-item col-1 players-table__rank">20</div>
+                <div class="players-table__body-item col-2">0x1tAaz5x1HUXrCNLbtMDqcw6o12Nn4xqX6o12Nn4x</div>
+                <div class="players-table__body-item col-3">13</div>
+                <div class="players-table__body-item col-4">3.10 ETH</div>
+              </li>
+              <li class="players-table__body-row">
+                <div class="players-table__body-item col-1 players-table__rank">21</div>
+                <div class="players-table__body-item col-2">0x1tAaz5x1HUXrCNLbtMDqcw6o12Nn4xqX6o12Nn4x</div>
+                <div class="players-table__body-item col-3">13</div>
+                <div class="players-table__body-item col-4">3.10 ETH</div>
+              </li>
+              <li class="players-table__body-row">
+                <div class="players-table__body-item col-1 players-table__rank">22</div>
+                <div class="players-table__body-item col-2">0x1tAaz5x1HUXrCNLbtMDqcw6o12Nn4xqX6o12Nn4x</div>
+                <div class="players-table__body-item col-3">13</div>
+                <div class="players-table__body-item col-4">3.10 ETH</div>
+              </li>
+              <li class="players-table__body-row">
+                <div class="players-table__body-item col-1 players-table__rank">23</div>
+                <div class="players-table__body-item col-2">0x1tAaz5x1HUXrCNLbtMDqcw6o12Nn4xqX6o12Nn4x</div>
+                <div class="players-table__body-item col-3">13</div>
+                <div class="players-table__body-item col-4">3.10 ETH</div>
+              </li>
+            </ul>
+          </div>
+        <div class="players-table__footer">
+          <span class="players-table__footer-title">Select Round</span>
+          <button class="players-table__footer-pagination">1</button>
+          <button class="players-table__footer-pagination">2</button>
+          <button class="players-table__footer-pagination btn">3</button>
+          <button class="players-table__footer-pagination">4</button>
+          <button class="players-table__footer-pagination">5</button>
+          <button class="players-table__footer-pagination">6</button>
+          <button class="players-table__footer-pagination">7</button>
+        </div>
+      </div>
+    </div>
+    <div class="deduction">
+      <img
+        class="deduction-bg"
+        src="img/half-ellipse.png"
+      />
+      <div class="deduction-title">Deduction for Marketing and Creator Profit</div>
+      <div class="deduction-content__wrap">
+        <span>Of 100% of the lottery's total sales, 11% is a deduction for marketing, charity and platform creators profits and 89% goes to the lottery winner. Please be aware that we deduct a portion of each lottery prize for marketing expenses and platform maintenance.</span>
+        <div>The deductions are as follows:</div>
+        <ul>
+          <li>5% of the award is allocated for marketing purposes. These funds are used to enhance our promotional efforts, expand our reach to attract more players, and ultimately contribute to larger prize pools.</li>
+          <li>5% of the award is donated to charity, allowing us to give back and make a positive impact in the community.</li>
+          <li>1% of the award is reserved as profit for the platform creators. This enables us to continue maintaining and improving the platform to provide a seamless experience for our users.</li>
+        </ul>
+        <span>Thank you for your understanding and support! Enjoy the lottery!</span>
+      </div>
+      <div class="deduction-img__wrap">
+        <img
+          class="deduction-img"
+          src="img/etherium.png"
+        />
+      </div>
+    </div>
+    <div class="contact">
+      <div class="contact-header">Support</div>
+      <div class="contact-info">Check our <a>How To Play</a> guide or contact our Support team:</div>
+      <button class="contact-btn btn">Get in touch</button>
+    </div>
+  </div>
+  <div class="footer">
+    <div class="footer-divider"></div>
+    <div class="footer-content">
+      <div class="footer-content__social">
+        <span>Social</span>
+        <img src="img/telegram.svg"/>
+        <img src="img/inst.svg">
+      </div>
+      <div class="footer-content__logo">
+        <img src="img/logo.png"/>
+      </div>
+    </div>
+  </div>
+</div>
+</body>
+<script>
+  let animation = bodymovin.loadAnimation({
+    // animationData: { /* ... */ },
+    container: document.getElementById('animation-container'), // required
+    path: 'animation/bitcoins.json', // required
+    renderer: 'svg', // required
+    loop: true, // optional
+    autoplay: true, // optional
+    name: "bitcoin", // optional
+  });
+  let animationBitcoinHeader = bodymovin.loadAnimation({
+    // animationData: { /* ... */ },
+    container: document.getElementById('header-jackpot__animation'), // required
+    path: 'animation/animation.json', // required
+    renderer: 'svg', // required
+    loop: true, // optional
+    autoplay: true, // optional
+    name: "bitcoin", // optional
+  });
+  let animationBitcoin = bodymovin.loadAnimation({
+    // animationData: { /* ... */ },
+    container: document.getElementById('round-info__animation'), // required
+    path: 'animation/animation.json', // required
+    renderer: 'svg', // required
+    loop: true, // optional
+    autoplay: true, // optional
+    name: "bitcoin", // optional
+  });
+  (function () {
+      x = setInterval(function time(){
+          let d = new Date();
+          let days = '00';
+          let hours = 24 - d.getHours();
+          let min = 60 - d.getMinutes();
+          if((min + '').length === 1){
+            min = '0' + min;
+          }
+          let sec = 60 - d.getSeconds();
+          if((sec + '').length === 1){
+            sec = '0' + sec;
+          }
+          document.getElementById("days").innerText = Math.floor(days),
+            document.getElementById("hours").innerText = Math.floor(hours),
+            document.getElementById("minutes").innerText = Math.floor(min),
+            document.getElementById("seconds").innerText = Math.floor(sec);
+        document.getElementById("days-round").innerText = Math.floor(days),
+          document.getElementById("hours-round").innerText = Math.floor(hours),
+          document.getElementById("minutes-round").innerText = Math.floor(min),
+          document.getElementById("seconds-round").innerText = Math.floor(sec);
+
+        }, 1000);
+        //seconds
+      // }, 0)
+  }());
+  const the_animation = document.querySelectorAll('.timeline__middle')
+
+  const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('timeline__point-animation')
+        }
+        else {
+          entry.target.classList.remove('timeline__point-animation')
+        }
+
+      })
+    },
+    { threshold: 0.5
+    });
+  //
+  for (let i = 0; i < the_animation.length; i++) {
+    const elements = the_animation[i];
+
+    observer.observe(elements);
+  }
+  const icons = document.querySelectorAll('.icon');
+  icons.forEach (icon => {
+    icon.addEventListener('click', (event) => {
+      icon.classList.toggle("open");
+      const menu = document.querySelector('.menu');
+      menu.classList.toggle('open-menu');
+    });
+  });
+</script>
+</html>
