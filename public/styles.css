@@ -1162,13 +1162,13 @@ navbar-jackpot__item-jackpot-img {
 
 @keyframes opacity1{
   0% {
-    opacity: 0;
+    opacity: 0.3;
   }
   50% {
-    opacity: 0.8;
+    opacity: 1;
   }
   100% {
-    opacity: 0;
+    opacity: 0.3;
   }
 }
 
@@ -2059,9 +2059,14 @@ navbar-jackpot__item-jackpot-img {
   }
 
   .howto-bg {
-    width: 94%;
-    bottom: -5%;
-    animation: opacity1 4s ease infinite;
+    width: 100%;
+    bottom: 8%;
+    /*animation: none;*/
+    animation: opacity1 3s ease infinite;
+    left: 0;
+    right: 0;
+    margin-left: auto;
+    margin-right: auto;
   }
 
   .howto-header {
