@@ -1,0 +1,20 @@
+image: node:lts
+
+before_script:
+  - ":"
+
+default:
+  tags:
+    - macos
+
+pages:
+  script:
+    - ":"
+
+  artifacts:
+    paths:
+      - public
+
+  only:
+    - main
+    - develop
