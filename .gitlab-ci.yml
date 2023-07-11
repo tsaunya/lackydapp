@@ -3,6 +3,10 @@ image: node:lts
 before_script:
   - ":"
 
+job:
+  tags:
+    - macos
+
 pages:
   script:
     - ":"
