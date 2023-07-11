@@ -9,6 +9,10 @@ body {
   position: relative;
 }
 
+.timeline-mobile {
+  display: none;
+}
+
 .bg-circle__top {
   position: absolute;
   top: 0;
@@ -97,6 +101,10 @@ body {
   justify-content: space-between;
   align-items: center;
   background-image: linear-gradient(136deg, #675EFF 7.28%, #6DAEFF 40.46%, #FFBB54 100%, #FFC46B 100%);
+}
+
+.navbar-jackpot__item-mobile {
+  display: none;
 }
 
 .navbar-jackpot__item span {
@@ -638,6 +646,23 @@ body {
   line-height: 28px;
 }
 
+.timeline__paragraph-participate {
+  padding-top: 11px;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 28px;
+}
+
+.timeline__paragraph-participate span {
+  color: #637CFF;
+}
+
+.timeline__paragraph-participate_icon {
+  width: 37px;
+  height: 37px;
+}
+
 .players {
   padding-top: 256px;
 }
@@ -853,6 +878,9 @@ body {
   padding-right: 20px;
 }
 
+.players-table__footer-pagination-wrap {
+  display: flex;
+}
 .players-table__rank {
   text-align: center;
 }
@@ -1017,15 +1045,22 @@ body {
   align-items: center;
 }
 
+.footer-content__social {
+  display: flex;
+  align-self: center;
+}
+
+.footer-content__social img {
+  width: 33px;
+  height: 30px;
+  margin-right: 20px;
+}
+
 .footer-content__logo {
   width: 290px;
 }
 
 .footer-content__social span {
-  padding-right: 21px;
-}
-
-.footer-content__social img {
   padding-right: 21px;
 }
 
@@ -1097,6 +1132,18 @@ body {
   }
   100%{
     background-size: 40%;
+  }
+}
+
+@keyframes gradient3 {
+  0%{
+    background-size: 60%;
+  }
+  50%{
+    background-size: 80%;
+  }
+  100%{
+    background-size: 60%;
   }
 }
 
@@ -1508,6 +1555,585 @@ body {
 @media screen and (max-width: 768px) {
   .navbar {
     padding: 16px 57px 0 57px;
+  }
+
+  .body {
+    padding: 0 57px;
+  }
+
+  .navbar-jackpot__item {
+    width: 300px;
+  }
+
+  .navbar-jackpot__item span {
+    font-size: 14px;
+  }
+
+  .navbar-jackpot__item-play {
+    margin-left: 20px;
+    width: 78px;
+  }
+
+  .navbar-jackpot__item img {
+    width: 19px;
+  }
+
+  .navbar-jackpot__item-play img {
+    width: 11px;
+  }
+
+  .header {
+    padding-top: 83px;
+  }
+
+  .header-text {
+    font-size: 30px;
+    padding-bottom: 35px;
+    max-width: 500px;
+  }
+
+  .header-title__img {
+    width: 81px;
+    height: 81px;
+    top: -60%;
+  }
+
+  .header-jackpot__timer {
+    order: 1;
+    flex-basis: 70%;
+    padding-top: 20px;
+    height: fit-content;
+  }
+
+  .header-jackpot__eth, .header-jackpot__play {
+    order: 2;
+  }
+
+  .header-jackpot__wrap {
+    flex-wrap: wrap;
+    border-radius: 50px;
+    height: 255px;
+  }
+
+  .header-jackpot__timer-info:after {
+    display: none;
+  }
+
+  .header-jackpot__eth-info > div:last-child:after {
+    height: 40%;
+  }
+
+  .header-jackpot__eth-info > div:first-child, .header-jackpot__timer-info, .header-jackpot__play-header {
+    font-size: 16px;
+    padding-bottom: 5px;
+  }
+
+  .header-jackpot__timer-info {
+    margin: 0 auto;
+  }
+
+  #countdown {
+    margin: 0 auto;
+  }
+
+  #countdown li, #countdown-round li {
+    width: 76px;
+    font-size: 44px;
+  }
+
+  .header-jackpot__play {
+    height: fit-content;
+  }
+
+  .header-jackpot__eth-info {
+    height: fit-content;
+  }
+
+  .header-jackpot__play-btn {
+    width: 250px;
+  }
+
+  .header-advantages__item-text {
+    font-size: 12px;
+  }
+
+  .header-advantages__item-circle {
+    width: 12px;
+    height: 12px;
+    border-radius: 12px;
+  }
+
+  .whatis {
+    padding-top: 105px;
+  }
+
+  .whatis-header {
+    font-size: 30px;
+  }
+
+  .whatis-main__wrap-info {
+    font-size: 14px;
+  }
+
+  .whatis-description__wrap-item {
+    padding: 13px 20px 30px 26px;
+    height: 260px;
+  }
+
+  .whatis-description__item-info {
+    font-size: 12px;
+    width: 97%;
+  }
+
+  .platform-header {
+    font-size: 30px;
+    max-width: 90%;
+  }
+
+  .platform-description__item-info {
+    font-size: 13px;
+    max-width: 221px;
+  }
+
+  .platform-description__item {
+    padding: 22px 17px 30px 54px;
+    width: 302px;
+  }
+
+  .timeline__paragraph {
+    padding: 40px 56px 55px 34px;
+  }
+
+  .timeline__component {
+    margin: 0 30px 20px 30px;
+  }
+
+  .players {
+    padding-top: 100px;
+  }
+
+  .round-header {
+    flex-direction: column;
+    align-items: start;
+  }
+
+  .round-timer {
+    display: flex;
+    align-items: center;
+    padding-top: 38px;
+  }
+
+  .round-timer__info {
+    font-size: 18px;
+    line-height: normal;
+    padding-bottom: 0;
+  }
+
+  .players-table {
+    padding: 49px 15px 0 15px;
+  }
+
+  .players-table__body {
+    margin: 0 15px;
+    padding-right: 15px;
+  }
+
+  .players-table__header-item {
+    font-size: 14px;
+  }
+
+  .players-table__body-item {
+    font-size: 13px;
+  }
+
+  .players-table__body-row {
+    padding: 10px 0;
+  }
+
+  .deduction-title {
+    font-size: 30px;
+    padding-bottom: 38px;
+  }
+
+  .deduction-content__wrap, .deduction-content__wrap ul li {
+    font-size: 13px;
+  }
+
+  .deduction-content__wrap {
+    padding: 46px 27px 45px 51px;
+  }
+
+  .deduction-img {
+    width: 120px;
+    height: 120px;
+  }
+
+  .contact-header {
+    font-size: 40px;
+    padding-bottom: 27px;
+  }
+
+  .contact-info {
+    font-size: 30px;
+  }
+
+  .contact-btn {
+    font-size: 30px;
+  }
+
+  .bg-circle__right {
+    width: 70%;
+    right: -20%;
+  }
+
+  .bg-circle__top {
+    width: 70%;
+  }
+}
+
+@media screen and (max-width: 360px) {
+  .body {
+    padding: 0;
+  }
+
+  .header {
+    padding: 93px 24px 0 20px;
+  }
+
+  .navbar {
+    padding: 19px 20px;
+    align-items: start;
+  }
+
+  .navbar-menu {
+    align-self: center;
+  }
+
+  .navbar-jackpot {
+    flex-wrap: wrap;
+    justify-content: right;
+  }
+
+  .header-jackpot__wrap {
+    height: 320px;
+  }
+
+  .navbar-jackpot__item {
+    display: none;
+  }
+
+  .navbar-jackpot__item-mobile {
+    width: 300px;
+    height: 36px;
+    border-radius: 20px;
+    border: 1px solid #FFF;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-image: linear-gradient(136deg, #675EFF 7.28%, #6DAEFF 40.46%, #FFBB54 100%, #FFC46B 100%);
+    margin: 0 auto;
+  }
+
+  .navbar-jackpot__item-play {
+    width: 67px;
+    height: 36px;
+    margin-left: 0;
+    font-size: 13px;
+  }
+
+  .navbar-jackpot__item-play img {
+    margin-right: 3px;
+  }
+
+  .navbar-menu__logo {
+    width: 138px;
+    height: 21px;
+    padding-right: 0;
+  }
+
+  .header-title__img {
+    width: 75px;
+    height: 75px;
+    top: -45%;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+  }
+
+  #countdown li, #countdown-round li {
+    width: 64px;
+  }
+
+  .header-jackpot__eth-info > div:last-child:after {
+    display: none;
+  }
+
+  .header-jackpot__animation {
+    width: 96px;
+    height: 96px;
+  }
+
+  .header-advantages__wrap {
+    padding-top: 24px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .header-advantages__item-circle {
+    display: none;
+  }
+
+  .header-advantages__item {
+    padding-bottom: 8px;
+  }
+
+  .bg-circle__left {
+    display: none;
+  }
+
+  .whatis {
+    padding: 105px 20px 0 20px;
+  }
+
+  .whatis-header {
+    font-size: 22px;
+  }
+
+  .whatis-main__wrap {
+    margin-top: 180px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: none;
+  }
+
+  .animation-container {
+    width: 156px;
+    left: 0;
+    right: 0;
+    top: -90%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .whatis-main__wrap-info {
+    padding: 37px 42px 30px 25px;
+  }
+
+  .whatis-main__img {
+    width: 89px;
+    height: 89px;
+    bottom: -30%;
+  }
+
+  .whatis-description__wrap {
+    flex-wrap: wrap;
+    width: 100%;
+    animation: gradient3 4s ease infinite;
+  }
+
+  .whatis-description__wrap-item {
+    max-width: 48%;
+    margin-bottom: 10px;
+    padding: 13px 5px 30px 26px;
+  }
+
+  .platform {
+    padding: 0 20px;
+  }
+
+  .platform-header {
+    padding: 35px 0;
+    font-size: 18px;
+    animation: gradient3 4s ease infinite;
+  }
+
+  .platform-description__wrap-mobile {
+    flex-direction: column;
+  }
+
+  .platform-description__item {
+    padding: 22px 17px 20px 54px;
+    margin-bottom: 6px;
+  }
+
+  .howto {
+    padding: 0 20px;
+  }
+
+  .howto-header {
+    font-size: 22px;
+    margin-top: 41px;
+  }
+
+  .howto-header__gradient {
+    padding: 0;
+  }
+
+  .timeline {
+    display: none;
+  }
+
+  .timeline__paragraph {
+    position: relative;
+    padding: 32px 45px 45px 14px;
+  }
+
+  .timeline__point {
+    left: 0;
+    right: 0;
+    top: -10%;
+    margin-left: auto;
+    margin-right: auto;
+    width: 31px;
+    height: 31px;
+    border-radius: 31px;
+  }
+
+  .timeline__component {
+    margin: 30px 0;
+    position: relative;
+  }
+
+  .qr-block {
+    background-repeat: no-repeat;
+    background-clip: padding-box;
+    background-size: 120% 100%;
+    background-position: center;
+  }
+
+  .round-wrap {
+    padding: 18px 33px 62px 33px;
+
+  }
+
+  .round-timer {
+    flex-direction: column;
+  }
+
+  .round-header {
+    align-items: center;
+  }
+
+  .round-timer__info {
+    padding-bottom: 19px;
+  }
+
+  .round-info {
+    justify-content: center;
+  }
+
+  .round-info__item-title {
+    font-size: 18px;
+    padding-bottom: 10px;
+  }
+
+  .round-info__item-round {
+    padding-bottom: 30px;
+  }
+
+  .round-info__item-jackpot {
+    flex-basis: auto;
+  }
+
+  .round-info__animation {
+    width: 106px;
+    height: 106px;
+  }
+
+  .round-info__item-winner {
+    align-items: center;
+  }
+
+  .round-info__item-winner_info {
+    width: 280px;
+    position: relative;
+    height: 67px;
+  }
+
+  .round-info__item-winner_info button {
+    position: absolute;
+    width: 130px;
+    bottom: -130%;
+    left: 0;
+    right: 0;
+    margin-left: auto;
+    margin-right: auto;
+    height: 67px;
+  }
+
+  .games-played {
+    display: none;
+  }
+
+  .wallet-address {
+    color: #FFF;
+    font-size: 10px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    word-break: break-all;
+  }
+  .col-1 {
+    flex-basis: 20%;
+  }
+
+  .col-4 {
+    flex-basis: 30%;
+  }
+
+  .col-2 {
+    flex-basis: 50%;
+  }
+
+  .players-table__header-item {
+    padding-right: 0;
+  }
+
+  .players-table__header {
+    max-width: 322px;
+  }
+
+  .players-table__footer {
+    flex-direction: column;
+    align-items: start;
+    padding: 12px 0 39px 20px;
+  }
+
+  .players-table__footer-pagination {
+    width: 30px;
+    height: 30px;
+    border-radius: 30px;
+  }
+
+  .players-table__footer-title {
+    padding-bottom: 20px;
+  }
+
+  .deduction {
+    padding: 70px 20px 0 20px;
+  }
+
+  .deduction-content__wrap {
+    padding: 30px 20px 30px 30px;
+  }
+
+  .contact {
+    padding: 70px 20px 91px 20px;
+    animation: gradient3 4s ease infinite;
+  }
+
+  .contact-header {
+    font-size: 30px;
+  }
+
+  .contact-info {
+    font-size: 22px;
+  }
+
+  .contact-btn {
+    padding: 16px 30px;
   }
 }
 

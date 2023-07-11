@@ -3,6 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <title>Luckydapp</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="reset.css" type="text/css">
   <link rel="stylesheet" href="styles.css" type="text/css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -66,6 +67,15 @@
         <li class="navbar-menu__links-item menu-item">Contact</li>
       </ul>
     </div>
+  </div>
+  <div class="navbar-jackpot__item-mobile">
+    <span class="navbar-jackpot__item-jackpot">JACKPOT:</span>
+    <img src="img/jackpot-icon.png"/>
+    <span class="navbar-jackpot__item-price">9.05 ETH</span>
+    <button class="navbar-jackpot__item-play">
+      <img src="img/play-icon.svg"/>
+      Play
+    </button>
   </div>
   <div class="body">
     <div class="header">
@@ -214,7 +224,17 @@
           <div class="timeline__paragraph">Fund your wallet: Load your wallet with sufficient ETH for your desired number of lottery tickets.</div>
         </div>
         <div class="timeline__component">
-          <div class="timeline__paragraph">Participate: Send exactly 0.01 ETH to the contract address Remember, 0.01 ETH is the price for 1 lottery ticket. For multiple entries, multiply 0.01 ETH by the number of tickets you want.</div>
+          <div class="timeline__paragraph">
+            Participate: Send exactly 0.01 ETH to the contract address Remember, 0.01 ETH is the price for 1 lottery ticket. For multiple entries, multiply 0.01 ETH by the number of tickets you want.
+            <div class="timeline__paragraph-participate">
+              <img
+                class="timeline__paragraph-participate_icon"
+                src="img/plus-circle.svg"
+              />
+              <span>Disclaimer:</span>
+              Do NOT Send ETH from Exchanges
+            </div>
+          </div>
         </div>
         <div class="timeline__middle">
           <div class="timeline__point"></div>
@@ -243,6 +263,32 @@
           <div class="timeline__point"></div>
         </div>
         <div class="timeline__component">
+          <div class="timeline__paragraph">Now that you know how easy and fun it is to play our Ethereum lottery, go ahead and give it a try! Good luck!</div>
+        </div>
+      </div>
+      <div class="timeline-mobile">
+        <div class="timeline__component">
+          <div class="timeline__point"></div>
+          <div class="timeline__paragraph">Get a wallet: If you don't already have one, sign up for an <a href="https://ethereum.org/en/wallets/find-wallet/">Ethereum</a>-compatible wallet (such as Metamask or Trustwallet).</div>
+        </div>
+        <div class="timeline__component">
+          <div class="timeline__point"></div>
+          <div class="timeline__paragraph">Fund your wallet: Load your wallet with sufficient ETH for your desired number of lottery tickets.</div>
+        </div>
+        <div class="timeline__component">
+          <div class="timeline__point"></div>
+          <div class="timeline__paragraph">Participate: Send exactly 0.01 ETH to the contract address Remember, 0.01 ETH is the price for 1 lottery ticket. For multiple entries, multiply 0.01 ETH by the number of tickets you want.</div>
+        </div>
+        <div class="timeline__component">
+          <div class="timeline__point"></div>
+          <div class="timeline__paragraph">Wait for confirmation: Once your transaction is confirmed on the Ethereum blockchain, you're entered into the lottery draw!</div>
+        </div>
+        <div class="timeline__component">
+          <div class="timeline__point"></div>
+          <div class="timeline__paragraph">Stay tuned: Keep your eyes on our website for the draw date and to see if you've won fabulous prize!</div>
+        </div>
+        <div class="timeline__component">
+          <div class="timeline__point"></div>
           <div class="timeline__paragraph">Now that you know how easy and fun it is to play our Ethereum lottery, go ahead and give it a try! Good luck!</div>
         </div>
       </div>
@@ -298,7 +344,7 @@
           <li class="players-table__header">
             <div class="players-table__header-item col-1 players-table__rank">Rank</div>
             <div class="players-table__header-item col-2">Wallet address</div>
-            <div class="players-table__header-item col-3">Games played</div>
+            <div class="players-table__header-item games-played col-3">Games played</div>
             <div class="players-table__header-item col-4">Total win</div>
           </li>
         </ul>
@@ -306,146 +352,147 @@
             <ul>
               <li class="players-table__body-row first-row">
                 <div class="players-table__body-item col-1 players-table__rank">1</div>
-                <div class="players-table__body-item col-2">0x1tAaz5x1HUXrCNLbtMDqcw6o12Nn4xqX6o12Nn4x</div>
-                <div class="players-table__body-item col-3">45</div>
+                <div class="players-table__body-item wallet-address col-2">0x1tAaz5x1HUXrCNLbtMDqcw6o12Nn4xqX6o12Nn4x</div>
+                <div class="players-table__body-item games-played col-3">45</div>
                 <div class="players-table__body-item col-4">7.10 ETH</div>
               </li>
               <li class="players-table__body-row second-row">
                 <div class="players-table__body-item col-1 players-table__rank">2</div>
-                <div class="players-table__body-item col-2">0x1tAaz5x1HUXrCNLbtMDqcw6o12Nn4xqX6o12Nn4x</div>
-                <div class="players-table__body-item col-3">25</div>
+                <div class="players-table__body-item wallet-address col-2">0x1tAaz5x1HUXrCNLbtMDqcw6o12Nn4xqX6o12Nn4x</div>
+                <div class="players-table__body-item games-played col-3">25</div>
                 <div class="players-table__body-item col-4">3.10 ETH</div>
               </li>
               <li class="players-table__body-row third-row">
                 <div class="players-table__body-item col-1 players-table__rank">3</div>
-                <div class="players-table__body-item col-2">0x1tAaz5x1HUXrCNLbtMDqcw6o12Nn4xqX6o12Nn4x</div>
-                <div class="players-table__body-item col-3">3</div>
+                <div class="players-table__body-item wallet-address col-2">0x1tAaz5x1HUXrCNLbtMDqcw6o12Nn4xqX6o12Nn4x</div>
+                <div class="players-table__body-item games-played col-3">3</div>
                 <div class="players-table__body-item col-4">0.95 ETH</div>
               </li>
               <li class="players-table__body-row">
                 <div class="players-table__body-item col-1 players-table__rank">4</div>
-                <div class="players-table__body-item col-2">0x1tAaz5x1HUXrCNLbtMDqcw6o12Nn4xqX6o12Nn4x</div>
-                <div class="players-table__body-item col-3">23</div>
+                <div class="players-table__body-item wallet-address col-2">0x1tAaz5x1HUXrCNLbtMDqcw6o12Nn4xqX6o12Nn4x</div>
+                <div class="players-table__body-item games-played col-3">23</div>
                 <div class="players-table__body-item col-4">4.23 ETH</div>
               </li>
               <li class="players-table__body-row">
                 <div class="players-table__body-item col-1 players-table__rank">5</div>
-                <div class="players-table__body-item col-2">0x1tAaz5x1HUXrCNLbtMDqcw6o12Nn4xqX6o12Nn4x</div>
-                <div class="players-table__body-item col-3">12</div>
+                <div class="players-table__body-item wallet-address col-2">0x1tAaz5x1HUXrCNLbtMDqcw6o12Nn4xqX6o12Nn4x</div>
+                <div class="players-table__body-item games-played col-3">12</div>
                 <div class="players-table__body-item col-4">6.02 ETH</div>
               </li>
               <li class="players-table__body-row">
                 <div class="players-table__body-item col-1 players-table__rank">6</div>
-                <div class="players-table__body-item col-2">0x1tAaz5x1HUXrCNLbtMDqcw6o12Nn4xqX6o12Nn4x</div>
-                <div class="players-table__body-item col-3">15</div>
+                <div class="players-table__body-item wallet-address col-2">0x1tAaz5x1HUXrCNLbtMDqcw6o12Nn4xqX6o12Nn4x</div>
+                <div class="players-table__body-item games-played col-3">15</div>
                 <div class="players-table__body-item col-4">2.17 ETH</div>
               </li>
               <li class="players-table__body-row">
                 <div class="players-table__body-item col-1 players-table__rank">7</div>
-                <div class="players-table__body-item col-2">0x1tAaz5x1HUXrCNLbtMDqcw6o12Nn4xqX6o12Nn4x</div>
-                <div class="players-table__body-item col-3">9</div>
+                <div class="players-table__body-item wallet-address col-2">0x1tAaz5x1HUXrCNLbtMDqcw6o12Nn4xqX6o12Nn4x</div>
+                <div class="players-table__body-item games-played col-3">9</div>
                 <div class="players-table__body-item col-4">1.89 ETH</div>
               </li>
               <li class="players-table__body-row">
                 <div class="players-table__body-item col-1 players-table__rank">8</div>
-                <div class="players-table__body-item col-2">0x1tAaz5x1HUXrCNLbtMDqcw6o12Nn4xqX6o12Nn4x</div>
-                <div class="players-table__body-item col-3">39</div>
+                <div class="players-table__body-item wallet-address col-2">0x1tAaz5x1HUXrCNLbtMDqcw6o12Nn4xqX6o12Nn4x</div>
+                <div class="players-table__body-item games-played col-3">39</div>
                 <div class="players-table__body-item col-4">5.21 ETH</div>
               </li>
               <li class="players-table__body-row">
                 <div class="players-table__body-item col-1 players-table__rank">9</div>
-                <div class="players-table__body-item col-2">0x1tAaz5x1HUXrCNLbtMDqcw6o12Nn4xqX6o12Nn4x</div>
-                <div class="players-table__body-item col-3">1</div>
+                <div class="players-table__body-item wallet-address col-2">0x1tAaz5x1HUXrCNLbtMDqcw6o12Nn4xqX6o12Nn4x</div>
+                <div class="players-table__body-item games-played col-3">1</div>
                 <div class="players-table__body-item col-4">3.10 ETH</div>
               </li>
               <li class="players-table__body-row">
                 <div class="players-table__body-item col-1 players-table__rank">10</div>
-                <div class="players-table__body-item col-2">0x1tAaz5x1HUXrCNLbtMDqcw6o12Nn4xqX6o12Nn4x</div>
-                <div class="players-table__body-item col-3">13</div>
+                <div class="players-table__body-item wallet-address col-2">0x1tAaz5x1HUXrCNLbtMDqcw6o12Nn4xqX6o12Nn4x</div>
+                <div class="players-table__body-item games-played col-3">13</div>
                 <div class="players-table__body-item col-4">3.10 ETH</div>
               </li>
               <li class="players-table__body-row">
                 <div class="players-table__body-item col-1 players-table__rank">11</div>
-                <div class="players-table__body-item col-2">0x1tAaz5x1HUXrCNLbtMDqcw6o12Nn4xqX6o12Nn4x</div>
-                <div class="players-table__body-item col-3">13</div>
+                <div class="players-table__body-item wallet-address col-2">0x1tAaz5x1HUXrCNLbtMDqcw6o12Nn4xqX6o12Nn4x</div>
+                <div class="players-table__body-item games-played col-3">13</div>
                 <div class="players-table__body-item col-4">3.10 ETH</div>
               </li>
               <li class="players-table__body-row">
                 <div class="players-table__body-item col-1 players-table__rank">12</div>
-                <div class="players-table__body-item col-2">0x1tAaz5x1HUXrCNLbtMDqcw6o12Nn4xqX6o12Nn4x</div>
-                <div class="players-table__body-item col-3">13</div>
+                <div class="players-table__body-item wallet-address col-2">0x1tAaz5x1HUXrCNLbtMDqcw6o12Nn4xqX6o12Nn4x</div>
+                <div class="players-table__body-item games-played col-3">13</div>
                 <div class="players-table__body-item col-4">3.10 ETH</div>
               </li>
               <li class="players-table__body-row">
                 <div class="players-table__body-item col-1 players-table__rank">13</div>
-                <div class="players-table__body-item col-2">0x1tAaz5x1HUXrCNLbtMDqcw6o12Nn4xqX6o12Nn4x</div>
-                <div class="players-table__body-item col-3">13</div>
+                <div class="players-table__body-item wallet-address col-2">0x1tAaz5x1HUXrCNLbtMDqcw6o12Nn4xqX6o12Nn4x</div>
+                <div class="players-table__body-item games-played col-3">13</div>
                 <div class="players-table__body-item col-4">3.10 ETH</div>
               </li>
               <li class="players-table__body-row">
                 <div class="players-table__body-item col-1 players-table__rank">14</div>
-                <div class="players-table__body-item col-2">0x1tAaz5x1HUXrCNLbtMDqcw6o12Nn4xqX6o12Nn4x</div>
-                <div class="players-table__body-item col-3">13</div>
+                <div class="players-table__body-item wallet-address col-2">0x1tAaz5x1HUXrCNLbtMDqcw6o12Nn4xqX6o12Nn4x</div>
+                <div class="players-table__body-item games-played col-3">13</div>
                 <div class="players-table__body-item col-4">3.10 ETH</div>
               </li>
               <li class="players-table__body-row">
                 <div class="players-table__body-item col-1 players-table__rank">15</div>
-                <div class="players-table__body-item col-2">0x1tAaz5x1HUXrCNLbtMDqcw6o12Nn4xqX6o12Nn4x</div>
-                <div class="players-table__body-item col-3">13</div>
+                <div class="players-table__body-item wallet-address col-2">0x1tAaz5x1HUXrCNLbtMDqcw6o12Nn4xqX6o12Nn4x</div>
+                <div class="players-table__body-item games-played col-3">13</div>
                 <div class="players-table__body-item col-4">3.10 ETH</div>
               </li>
               <li class="players-table__body-row">
                 <div class="players-table__body-item col-1 players-table__rank">16</div>
-                <div class="players-table__body-item col-2">0x1tAaz5x1HUXrCNLbtMDqcw6o12Nn4xqX6o12Nn4x</div>
-                <div class="players-table__body-item col-3">13</div>
+                <div class="players-table__body-item wallet-address col-2">0x1tAaz5x1HUXrCNLbtMDqcw6o12Nn4xqX6o12Nn4x</div>
+                <div class="players-table__body-item games-played col-3">13</div>
                 <div class="players-table__body-item col-4">3.10 ETH</div>
               </li>
               <li class="players-table__body-row">
                 <div class="players-table__body-item col-1 players-table__rank">17</div>
-                <div class="players-table__body-item col-2">0x1tAaz5x1HUXrCNLbtMDqcw6o12Nn4xqX6o12Nn4x</div>
-                <div class="players-table__body-item col-3">13</div>
+                <div class="players-table__body-item wallet-address col-2">0x1tAaz5x1HUXrCNLbtMDqcw6o12Nn4xqX6o12Nn4x</div>
+                <div class="players-table__body-item games-played col-3">13</div>
                 <div class="players-table__body-item col-4">3.10 ETH</div>
               </li>
               <li class="players-table__body-row">
                 <div class="players-table__body-item col-1 players-table__rank">18</div>
-                <div class="players-table__body-item col-2">0x1tAaz5x1HUXrCNLbtMDqcw6o12Nn4xqX6o12Nn4x</div>
-                <div class="players-table__body-item col-3">13</div>
+                <div class="players-table__body-item wallet-address col-2">0x1tAaz5x1HUXrCNLbtMDqcw6o12Nn4xqX6o12Nn4x</div>
+                <div class="players-table__body-item games-played col-3">13</div>
                 <div class="players-table__body-item col-4">3.10 ETH</div>
               </li>
               <li class="players-table__body-row">
                 <div class="players-table__body-item col-1 players-table__rank">19</div>
-                <div class="players-table__body-item col-2">0x1tAaz5x1HUXrCNLbtMDqcw6o12Nn4xqX6o12Nn4x</div>
-                <div class="players-table__body-item col-3">13</div>
+                <div class="players-table__body-item wallet-address col-2">0x1tAaz5x1HUXrCNLbtMDqcw6o12Nn4xqX6o12Nn4x</div>
+                <div class="players-table__body-item games-played col-3">13</div>
                 <div class="players-table__body-item col-4">3.10 ETH</div>
               </li>
               <li class="players-table__body-row">
                 <div class="players-table__body-item col-1 players-table__rank">20</div>
-                <div class="players-table__body-item col-2">0x1tAaz5x1HUXrCNLbtMDqcw6o12Nn4xqX6o12Nn4x</div>
-                <div class="players-table__body-item col-3">13</div>
+                <div class="players-table__body-item wallet-address col-2">0x1tAaz5x1HUXrCNLbtMDqcw6o12Nn4xqX6o12Nn4x</div>
+                <div class="players-table__body-item games-played col-3">13</div>
                 <div class="players-table__body-item col-4">3.10 ETH</div>
               </li>
               <li class="players-table__body-row">
                 <div class="players-table__body-item col-1 players-table__rank">21</div>
-                <div class="players-table__body-item col-2">0x1tAaz5x1HUXrCNLbtMDqcw6o12Nn4xqX6o12Nn4x</div>
-                <div class="players-table__body-item col-3">13</div>
+                <div class="players-table__body-item wallet-address col-2">0x1tAaz5x1HUXrCNLbtMDqcw6o12Nn4xqX6o12Nn4x</div>
+                <div class="players-table__body-item games-played col-3">13</div>
                 <div class="players-table__body-item col-4">3.10 ETH</div>
               </li>
               <li class="players-table__body-row">
                 <div class="players-table__body-item col-1 players-table__rank">22</div>
-                <div class="players-table__body-item col-2">0x1tAaz5x1HUXrCNLbtMDqcw6o12Nn4xqX6o12Nn4x</div>
-                <div class="players-table__body-item col-3">13</div>
+                <div class="players-table__body-item wallet-address col-2">0x1tAaz5x1HUXrCNLbtMDqcw6o12Nn4xqX6o12Nn4x</div>
+                <div class="players-table__body-item games-played col-3">13</div>
                 <div class="players-table__body-item col-4">3.10 ETH</div>
               </li>
               <li class="players-table__body-row">
                 <div class="players-table__body-item col-1 players-table__rank">23</div>
-                <div class="players-table__body-item col-2">0x1tAaz5x1HUXrCNLbtMDqcw6o12Nn4xqX6o12Nn4x</div>
-                <div class="players-table__body-item col-3">13</div>
+                <div class="players-table__body-item wallet-address col-2">0x1tAaz5x1HUXrCNLbtMDqcw6o12Nn4xqX6o12Nn4x</div>
+                <div class="players-table__body-item games-played col-3">13</div>
                 <div class="players-table__body-item col-4">3.10 ETH</div>
               </li>
             </ul>
           </div>
         <div class="players-table__footer">
           <span class="players-table__footer-title">Select Round</span>
+          <div class="players-table__footer-pagination-wrap">
           <button class="players-table__footer-pagination">1</button>
           <button class="players-table__footer-pagination">2</button>
           <button class="players-table__footer-pagination btn">3</button>
@@ -453,6 +500,7 @@
           <button class="players-table__footer-pagination">5</button>
           <button class="players-table__footer-pagination">6</button>
           <button class="players-table__footer-pagination">7</button>
+          </div>
         </div>
       </div>
     </div>
