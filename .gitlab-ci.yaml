@@ -12,4 +12,4 @@ pages: # название таски
     paths:
       - public
   only: # собирать только из ветки мастера
-    - master
+    - develop
