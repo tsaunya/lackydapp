@@ -1058,6 +1058,7 @@ navbar-jackpot__item-jackpot-img {
   background-size: contain;
   max-width: 903px;
   padding: 118px 0;
+  position: relative;
 }
 
 .qr-wrap {
@@ -1085,6 +1086,32 @@ navbar-jackpot__item-jackpot-img {
   font-style: normal;
   font-weight: 600;
   line-height: 100px;
+}
+
+.code-wrap {
+  width: 471px;
+  border-radius: 100px;
+  border: 1px solid #000;
+  background: #19193A;
+  margin: 0 auto;
+  height: 81px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  bottom: 13%;
+  left: 0;
+  right: 0;
+}
+
+.code-copy{
+  cursor: pointer;
+  z-index: 5;
+}
+
+.code-number {
+  padding-bottom: 10px;
 }
 
 .bg-circle__right {
@@ -1487,6 +1514,21 @@ navbar-jackpot__item-jackpot-img {
   .qr-wrap span {
     font-size: 36px;
     line-height: normal;
+  }
+
+  .code-wrap {
+    width: 409px;
+    height: 65px;
+    color: #FFF;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 28px;
+    bottom: 10%;
+  }
+
+  .code-number {
+    padding-bottom: 5px;
   }
 
   .players {
@@ -1918,10 +1960,6 @@ navbar-jackpot__item-jackpot-img {
     z-index: 6;
   }
 
-  /*.navbar-jackpot__item-mobile img{*/
-  /*  background: none;*/
-  /*}*/
-
   .navbar-jackpot__item-play {
     width: 67px;
     height: 36px;
@@ -2107,6 +2145,12 @@ navbar-jackpot__item-jackpot-img {
     background-position: center;
     z-index: 5;
     position: relative;
+  }
+
+  .code-wrap {
+    width: 315px;
+    height: 73px;
+    font-size: 12px;
   }
 
   .round-wrap {

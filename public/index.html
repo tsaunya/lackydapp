@@ -38,7 +38,7 @@
       <div class="navbar-menu__links">
         <span class="navbar-menu__links-item"><a href="#about">What is</a></span>
         <span class="navbar-menu__links-item"><a href="#howto">How To Play</a></span>
-        <span class="navbar-menu__links-item"><a href="#play">Play now</a></span>
+        <span class="navbar-menu__links-item"><a href="#qr">Play now</a></span>
         <span class="navbar-menu__links-item"><a href="#support">Support</a></span>
       </div>
     </div>
@@ -49,7 +49,7 @@
         <span class="navbar-jackpot__item-price">9.05 ETH</span>
         <button
           class="navbar-jackpot__item-play"
-          onclick="javascript:window.open('https://t.me/luckydapp', '_blank')"
+          onclick="window.location.href='#qr'"
         >
           <img src="img/play-icon.svg"/>
           Play
@@ -80,7 +80,7 @@
       <ul class="menu">
         <li class="navbar-menu__links-item menu-item"><a href="#about">What is</a></li>
         <li class="navbar-menu__links-item menu-item"><a href="#howto">How To Play</a></li>
-        <li class="navbar-menu__links-item menu-item"><a href="#play">Play now</a></li>
+        <li class="navbar-menu__links-item menu-item"><a href="#qr">Play now</a></li>
         <li class="navbar-menu__links-item menu-item"><a href="#support">Support</a></li>
         <li class="navbar-menu__links-item menu-item">
           Social
@@ -97,7 +97,7 @@
     <span class="navbar-jackpot__item-price">9.05 ETH</span>
     <button
       class="navbar-jackpot__item-play"
-      onclick="javascript:window.open('https://t.me/luckydapp', '_blank')"
+      onclick="window.location.href='#qr'"
     >
       <img src="img/play-icon.svg"/>
       Play
@@ -145,7 +145,7 @@
           <div class="header-jackpot__play-btn">
             <span>1 ticket ≈ 20 $</span>
             <button
-              onclick="javascript:window.open('https://t.me/luckydapp', '_blank')"
+              onclick="window.location.href='#qr'"
               class="btn"
             >Play</button>
           </div>
@@ -324,10 +324,26 @@
           <div class="timeline__paragraph">Now that you know how easy and fun it is to play our Ethereum lottery, go ahead and give it a try! Good luck!</div>
         </div>
       </div>
-      <div class="qr-block">
+      <div
+        id="qr"
+        class="qr-block"
+      >
         <div class="qr-wrap">
           <img src="img/qr.png"/>
           <span>Scan me!</span>
+        </div>
+        <div class="code-wrap">
+          <span
+            class="code-number"
+            id="code-number"
+          >0x01ffC631f46f2626B16Ad381e0b5d00609405164</span>
+          <button
+            onclick="copyFunction()"
+            class="code-copy"
+          >
+            <img src="img/copy-icon.svg"/>
+            Copy
+          </button>
         </div>
       </div>
     </div>
@@ -367,7 +383,7 @@
             <div class="round-info__item-winner_info">
               <span>No Winner Yet</span>
               <button
-                onclick="javascript:window.open('https://t.me/luckydapp', '_blank')"
+                onclick="window.location.href='#qr'"
                 class="btn"
               >Play</button>
             </div>
@@ -669,5 +685,16 @@
       menu.classList.toggle('open-menu');
     });
   });
+
+  function copyFunction() {
+    let copyText = document.getElementById('code-number');
+    navigator.clipboard.writeText(copyText.innerText).then(() => {
+      console.log('Content copied to clipboard');
+      /* Resolved - text copied to clipboard successfully */
+    },() => {
+      console.error('Failed to copy');
+      /* Rejected - text failed to copy to the clipboard */
+    });
+  }
 </script>
 </html>
