@@ -33,7 +33,7 @@ body {
   width: 50%;
   animation: opacity 4s ease infinite;
   z-index: 1;
-  transform: rotate(270deg);
+  transform: rotate(90deg);
 }
 
 .bg-circle__left-middle {
@@ -757,6 +757,7 @@ navbar-jackpot__item-jackpot-img {
   display: flex;
   flex-direction: column;
   flex-basis: 40%;
+  align-items: center;
 }
 
 .round-info__item-winner_info {
@@ -816,7 +817,7 @@ navbar-jackpot__item-jackpot-img {
 
 .players-table {
   margin: auto;
-  padding: 49px 75px 0 75px;
+  padding: 49px 119px 0 75px;
 }
 
 .players-table__body {
@@ -832,11 +833,19 @@ navbar-jackpot__item-jackpot-img {
 }
 
 .col-2 {
-  flex-basis: 49%;
+  width: 56%;
 }
 
-.col-1, .col-3, .col-4 {
-  flex-basis: 17%;
+.col-1 {
+  width: 9%;
+}
+
+.col-3 {
+  width: 19%;
+}
+
+.col-4 {
+  width: 16%;
 }
 
 .players-table__header-item, .players-table__body-item {
@@ -845,7 +854,7 @@ navbar-jackpot__item-jackpot-img {
   font-style: normal;
   font-weight: 700;
   line-height: 28px;
-  padding-right: 20px;
+  text-align: center;
 }
 
 .players-table__body-row {
@@ -858,7 +867,6 @@ navbar-jackpot__item-jackpot-img {
 
 .players-table__body-item {
   margin-bottom: 8px;
-  padding-right: 20px;
 }
 
 .players-table__footer-pagination-wrap {
@@ -866,10 +874,6 @@ navbar-jackpot__item-jackpot-img {
 }
 .players-table__rank {
   text-align: center;
-}
-
-.players-table__header {
-  position: sticky;
 }
 
 .first-row {
@@ -918,11 +922,11 @@ navbar-jackpot__item-jackpot-img {
 .deduction-bg {
   position: absolute;
   bottom: 0;
-  left: 5%;
-  width: 95%;
+  left: 0;
+  width: 100%;
   animation: opacity 4s ease infinite;
   z-index: 1;
-  transform: rotate(180deg);
+  /*transform: rotate(180deg);*/
 }
 
 .deduction-title {
@@ -1180,7 +1184,7 @@ navbar-jackpot__item-jackpot-img {
     opacity: 0;
   }
   50% {
-    opacity: 0.5;
+    opacity: 0.4;
   }
   100% {
     opacity: 0;
@@ -1224,7 +1228,7 @@ navbar-jackpot__item-jackpot-img {
   opacity: 1;
 }
 
-@media screen and (max-width: 1600px) {
+@media screen and (max-width: 1700px) {
   .body {
     padding: 0 116px;
   }
@@ -1252,6 +1256,34 @@ navbar-jackpot__item-jackpot-img {
 
   .round-info__item-winner {
     flex-basis: 30%;
+  }
+}
+
+@media screen and (max-width: 1400px) {
+  .players-table__header-item, .players-table__body-item {
+    font-size: 16px;
+    padding-right: 15px;
+  }
+
+  .players-table__body-row {
+    padding: 20px 0;
+  }
+
+  .round-info__item-winner_info {
+    width: 400px;
+    height: 71px;
+  }
+
+  .round-info__item-winner_info span {
+    font-size: 35px;
+  }
+
+  .round-info__item-jackpot-info span {
+    font-size: 46px;
+  }
+
+  .round-info__item-round_number {
+    padding: 20px 80px 20px 48px;
   }
 }
 
@@ -1362,6 +1394,8 @@ navbar-jackpot__item-jackpot-img {
 
   .menu-item img {
     padding: 9px;
+    width: 46px;
+    height: 46px;
   }
 
   .header-text {
@@ -1583,16 +1617,7 @@ navbar-jackpot__item-jackpot-img {
     font-size: 26px;
   }
 
-  .players-table__header-item, .players-table__body-item {
-    font-size: 16px;
-    padding-right: 15px;
-  }
-
   .players-table li {
-    padding: 20px 0;
-  }
-
-  .players-table__body-row {
     padding: 20px 0;
   }
 
@@ -2019,7 +2044,7 @@ navbar-jackpot__item-jackpot-img {
   }
 
   .whatis {
-    padding: 105px 20px 0 20px;
+    padding: 51px 20px 0 20px;
   }
 
   .whatis-header {
