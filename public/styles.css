@@ -530,13 +530,38 @@ navbar-jackpot__item-jackpot-img {
   line-height: 28px;
 }
 
-.platform-description__img {
+.platform-description__etherscan {
   position: absolute;
   z-index: 2;
-  top: 17%;
+  top: 3%;
   left: 55%;
   width: 898px;
-  height: 505px;
+  height: 600px;
+  display: flex;
+  flex-direction: column;
+}
+
+.platform-description__etherscan-mobile {
+  display: none;
+}
+
+.platform-description__img {
+}
+
+.platform-description__etherscan-btn {
+  background: linear-gradient(136deg, #68C0FF 0%, #9D20FF 100%);
+  color: #FFF;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  text-transform: uppercase;
+  border-radius: 100px;
+  padding: 13px 20px;
+  cursor: pointer;
+  z-index: 5;
+  align-self: center;
+  max-width: fit-content;
 }
 
 .platform-description__img-mobile {
@@ -1232,9 +1257,10 @@ navbar-jackpot__item-jackpot-img {
   .body {
     padding: 0 116px;
   }
-  .platform-description__img {
+  .platform-description__etherscan {
     width: 630px;
     height: 400px;
+    top: 15%;
   }
   .bg-circle__right {
     right: -11%;
@@ -1287,7 +1313,7 @@ navbar-jackpot__item-jackpot-img {
   }
 }
 
-@media screen and (max-width: 1280px) {
+@media screen and (max-width: 1300px) {
   .navbar {
     padding: 16px 72px 0 72px;
   }
@@ -1509,6 +1535,27 @@ navbar-jackpot__item-jackpot-img {
     display: flex;
     justify-content: space-between;
     padding-top: 33px;
+  }
+
+  .platform-description__etherscan {
+    display: none;
+  }
+
+  .platform-description__etherscan-mobile {
+    display: block;
+    background: linear-gradient(136deg, #68C0FF 0%, #9D20FF 100%);
+    color: #FFF;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    text-transform: uppercase;
+    border-radius: 100px;
+    padding: 13px 20px;
+    cursor: pointer;
+    z-index: 5;
+    margin: 0 auto;
+    max-width: fit-content;
   }
 
   .howto-header {
@@ -2115,6 +2162,10 @@ navbar-jackpot__item-jackpot-img {
     margin-bottom: 6px;
     margin-left: auto;
     margin-right: auto;
+  }
+
+  .platform-description__etherscan-mobile {
+    font-size: 13px;
   }
 
   .howto {
