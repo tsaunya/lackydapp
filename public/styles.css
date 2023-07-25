@@ -126,7 +126,7 @@ body {
   padding-right: 10px;
 }
 
-navbar-jackpot__item-jackpot-img {
+.navbar-jackpot__item-jackpot-img {
   width: 25px;
   height: 30px;
 }
@@ -769,6 +769,7 @@ navbar-jackpot__item-jackpot-img {
   position: absolute;
   bottom: -30%;
   left: -10%;
+  max-width: 120px;
 }
 /*.round-info__item-jackpot-info img {*/
 /*  position: absolute;*/
@@ -1285,6 +1286,16 @@ navbar-jackpot__item-jackpot-img {
   }
 }
 
+@media screen and (max-width: 1470px) {
+  .round-info__item-jackpot-info span {
+    font-size: 40px;
+  }
+
+  .round-info__item-jackpot-info {
+    padding: 15px 30px 15px 80px;
+  }
+}
+
 @media screen and (max-width: 1400px) {
   .players-table__header-item, .players-table__body-item {
     font-size: 16px;
@@ -1304,9 +1315,9 @@ navbar-jackpot__item-jackpot-img {
     font-size: 35px;
   }
 
-  .round-info__item-jackpot-info span {
-    font-size: 46px;
-  }
+  /*.round-info__item-jackpot-info span {*/
+  /*  font-size: 46px;*/
+  /*}*/
 
   .round-info__item-round_number {
     padding: 20px 80px 20px 48px;
