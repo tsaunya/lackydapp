@@ -55,9 +55,44 @@
           Play
         </button>
       </div>
-      <button class="navbar-jackpot__lang">
-        En
-      </button>
+      <div
+        class="navbar-jackpot__lang-wrap"
+        id="lang-wrap"
+      >
+        <button
+          class="navbar-jackpot__lang"
+          id="lang"
+          onclick="changeLang()"
+        >
+          En
+        </button>
+        <ul
+          class="navbar-jackpot__lang-menu"
+          id="menu-lang"
+        >
+          <li
+            class="navbar-jackpot__lang-menu-item lang-underline"
+            onclick="setLang(event)"
+            id="Ru"
+          >
+            Ru
+          </li>
+          <li
+            class="navbar-jackpot__lang-menu-item lang-underline"
+            onclick="setLang(event)"
+            id="Es"
+          >
+            Es
+          </li>
+          <li
+            class="navbar-jackpot__lang-menu-item"
+            onclick="setLang(event)"
+            id="Zh"
+          >
+            Zh
+          </li>
+        </ul>
+      </div>
       <div class="icon nav-icon-5">
         <img src="img/burger.svg"/>
       </div>
@@ -67,10 +102,42 @@
             src="img/logo-black.png"
             class="nav-mobile__header__logo"
           />
-          <div>
-            <button class="nav-mobile__header__lang">
-              En
-            </button>
+          <div class="nav-mobile__header-wrap">
+            <div
+              class="navbar-jackpot__lang-wrap-mobile"
+              id="lang-wrap-mobile"
+            >
+              <button
+                class="nav-mobile__header__lang"
+                id="lang-mobile"
+                onclick="changeLangMobile()"
+              >
+                En
+              </button>
+              <div
+                class="none"
+                id="menu-lang-mobile"
+              >
+                <span
+                  class="navbar-jackpot__lang-menu-item-mobile"
+                  onclick="setLangMobile(event)"
+                >
+                  Ru
+                </span>
+                <span
+                  class="navbar-jackpot__lang-menu-item-mobile"
+                  onclick="setLangMobile(event)"
+                >
+                  Es
+                </span>
+                <span
+                  class="navbar-jackpot__lang-menu-item-mobile"
+                  onclick="setLangMobile(event)"
+                >
+                  Zh
+                </span>
+              </div>
+            </div>
             <img
               src="img/close.svg"
               class="nav-mobile__header-close icon"
@@ -635,7 +702,7 @@
     container: document.getElementById('round-info__animation'), // required
     path: 'animation/coin.json', // required
     renderer: 'svg', // required
-    // loop: true, // optional
+    loop: true, // optional
     autoplay: true, // optional
     name: "bitcoin", // optional
   });
@@ -704,6 +771,52 @@
       console.error('Failed to copy');
       /* Rejected - text failed to copy to the clipboard */
     });
+  }
+
+  function changeLang() {
+    let wrap = document.getElementById('lang-wrap');
+    let menu = document.getElementById('menu-lang');
+    if (wrap.classList.contains('navbar-jackpot__lang-wrap')) {
+      wrap.setAttribute('class', 'lang-menu-active');
+      menu.setAttribute('style', 'display:block');
+    } else {
+      wrap.setAttribute('class', 'navbar-jackpot__lang-wrap');
+      menu.setAttribute('style', 'display:none');
+    }
+  }
+
+  function changeLangMobile() {
+    let wrap = document.getElementById('lang-wrap-mobile');
+    let menu = document.getElementById('menu-lang-mobile');
+    if (wrap.classList.contains('navbar-jackpot__lang-wrap-mobile')) {
+      wrap.setAttribute('class', 'lang-menu-active-mobile');
+      menu.setAttribute('class', 'navbar-jackpot__lang-menu-mobile');
+    } else {
+      wrap.setAttribute('class', 'navbar-jackpot__lang-wrap-mobile');
+      menu.setAttribute('class', 'none');
+    }
+  }
+
+  function setLang(event) {
+    let settedLang = document.getElementById('lang');
+    let lang = event.target.innerText;
+    event.target.innerText = settedLang.innerText;
+    settedLang.innerText = lang;
+    let menu = document.getElementById('menu-lang');
+    menu.setAttribute('style', 'display:none');
+    let wrap = document.getElementById('lang-wrap');
+    wrap.setAttribute('class', 'navbar-jackpot__lang-wrap');
+  }
+
+  function setLangMobile(event) {
+    let settedLang = document.getElementById('lang-mobile');
+    let lang = event.target.innerText;
+    event.target.innerText = settedLang.innerText;
+    settedLang.innerText = lang;
+    let menu = document.getElementById('menu-lang-mobile');
+    menu.setAttribute('class', 'none');
+    let wrap = document.getElementById('lang-wrap-mobile');
+    wrap.setAttribute('class', 'navbar-jackpot__lang-wrap-mobile');
   }
 </script>
 </html>
